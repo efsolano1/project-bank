@@ -1,0 +1,37 @@
+.alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 5px;
+    width: auto;
+     max-width: 400px;
+
+    position: fixed;
+    top: 10%; /* Set the vertical position 10% from top */
+    right: 20px; /* set a horizontal distance of 20px from right*/
+    z-index: 9999; /* Ensure it's on top of other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+
+    transition: all 0.3s ease-in-out;  /* Smooth transition effect */
+
+  &__title {
+    color: #fff;
+    font-size: 0.8rem; /* Adjust font size */
+   }
+  &--success {
+    background-color: #5aac46;
+  }
+  &--error {
+    background-color: red;
+  }
+  &__close-button {
+    background-color: transparent;
+    border: none;
+    color: #eee7e7;
+    font-size: 1.3rem;
+    font-weight: bold;
+     cursor: pointer;
+     margin-left: 9px;
+  }
+}

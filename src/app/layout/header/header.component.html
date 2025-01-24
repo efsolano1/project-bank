@@ -1,0 +1,43 @@
+<!--<div class="content">
+    <nav class="navbar content__navbar">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right content__navbar-nav">
+          <li class="content__navbar-item">
+            <a href="#" class="content__navbar-link">
+               <img src="../../../assets/images/login1.jpg" alt="User Image" class="content__navbar-icon">
+            </a>
+          </li>
+          <li class="content__navbar-item">
+              <a href="#" class="content__navbar-link">Test User</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+-->
+<div class="content">
+  <nav class="navbar content__navbar">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav navbar-right content__navbar-nav">
+        <li class="content__navbar-item">
+          <div class="content__navbar-link">
+            <span class="content__navbar-text">{{username}}</span>
+            <div class="content__navbar-image-container">
+              <img
+                src="../../../assets/images/login1.jpg"
+                alt="User Image"
+                class="content__navbar-icon"
+                (click)="toggleLogout($event)"
+              />
+              @if(showLogout){
+                <div class="content__navbar-logout" (click)="logout()">Logout</div>
+              }
+             
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<app-loader [isVisible]="loader"></app-loader>

@@ -1,0 +1,13 @@
+
+.content-container {
+  display: flex; /* Cambiamos a flex para el control vertical */
+  flex-direction: column; /* Apila verticalmente header, sidebar, main y footer */
+  min-height: 91.4vh; /* Asegura que ocupe al menos toda la altura de la pantalla */
+}
+
+.main-content {
+  padding: 80px;
+  flex: 1; /* Permite que el main content ocupe el espacio vertical disponible */
+  margin-left: 180px;
+  width: 1325px;
+}

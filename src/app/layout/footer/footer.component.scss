@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  margin-left: 240px;
+  font-family: 'Open Sans', sans-serif; /* Apply Open Sans font */
+  
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px; /* Set a maximum width */
+      margin: 0 auto; /* Center the content horizontally */
+      padding: 0 20px; /* Add some horizontal padding */
+    }
+
+    &__text {
+       color: black;
+      font-size: 14px; /* Slightly smaller font size */
+      font-weight: 500;  /* Medium font weight */
+       white-space: nowrap; /* Prevent text from wrapping */
+      overflow: hidden; /* Hide overflow text */
+      text-overflow: ellipsis; /* Show ellipsis for overflow text */
+      
+    }
+
+    &__social {
+      display: flex;
+        align-items: center; /* Align social icons vertically */
+         justify-content: flex-end; /* Align social icons to the right */
+    }
+
+    &__social-link {
+      display: inline-flex;  /* Use inline-flex for better icon centering */
+      margin-left: 15px;  /* Slightly increased margin */
+        align-items: center;
+       color: #777;
+       font-size: 22px;  /* Slightly larger font size for icons */
+        transition: color 0.3s ease;
+         padding: 5px; /* Add padding to the link */
+       border-radius: 4px; /* Rounded corners */
+          
+         &:hover {
+            color: #333;
+            background-color: rgba(0,0,0,0.05); /* Add a subtle background on hover */
+         }
+
+        &--twitter {
+        }
+        &--facebook {
+        }
+        &--instagram {
+        }
+    }
+
+    &__social-icon {
+      fill: #000000;
+      width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        margin-left: 4px;
+    }
+  }
