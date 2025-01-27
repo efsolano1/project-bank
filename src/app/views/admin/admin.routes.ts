@@ -8,6 +8,7 @@ import { DashboardComponent } from "../../components/modules/dashboard/dashboard
 import { LoaderComponent } from "../../components/loader/loader.component";
 import { AccountsComponent } from "../accounts/accounts.component";
 import { TransactionsComponent } from "../transactions/transactions.component";
+import { adminGuard } from "./admin.guard";
 
 export const routes: Routes = [{
     path:'',
@@ -16,6 +17,7 @@ export const routes: Routes = [{
 {
     path: 'app',
     component: ContentComponent,
+    canActivate: [adminGuard],
     children: [
       {
         path: 'dashboard',

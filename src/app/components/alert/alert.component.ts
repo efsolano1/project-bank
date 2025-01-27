@@ -17,7 +17,7 @@ export class AlertComponent implements OnInit{
     ngOnInit(): void {
         this.timeoutId = setTimeout(()=>{
           this.closeAlert();
-       },6000)
+       },2000)
     }
 
   closeAlert() {

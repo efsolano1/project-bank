@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 /* Global Styles */
 body {
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
@@ -15,9 +15,6 @@ body {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-
-/* Content Block */
-
 
 /* Sidebar Block */
 .sidebar {
@@ -37,45 +34,43 @@ body {
   &__header {
     background-color: #263238;
     font-size: 20px;
-      font-weight: 500;  /* Medium font weight for header */
+    font-weight: 500;
     line-height: 52px;
     text-align: center;
-
 
     &-link {
       color: #fff;
       display: block;
       text-decoration: none;
-          transition: color 0.3s ease;
+      transition: color 0.3s ease;
       &:hover {
-        color: #b3d4fc; /* Light color on hover */
+        color: #b3d4fc;
       }
     }
   }
   &__nav {
-    padding: 10px 0; /* Add some padding around the navigation items */
-      
-      &-item {
-      border-bottom: 1px solid #455A64; /* Add a subtle separator between items */
-      }
+    padding: 10px 0;
+
+    &-item {
+      border-bottom: 1px solid #455a64;
+    }
     &-link {
       background: none;
       color: #cfd8dc;
-        font-size: 15px; /* Slightly larger font size */
+      font-size: 15px;
       padding: 14px 24px;
-      display: flex; /* Use flexbox for icon and text alignment */
-      align-items: center; /* Align items vertically */
+      display: flex;
+      align-items: center;
       text-decoration: none;
-      transition: all 0.3s ease; /* Smooth transition on hover */
+      transition: all 0.3s ease;
       &:hover {
-          background: rgba(255,255,255,0.05); /* Subtle background hover effect */
-        color: #fff; /* White text on hover */
-        }
+        background: rgba(255, 255, 255, 0.05);
+        color: #fff;
+      }
     }
     &-icon {
-        margin-right: 14px; /* Space between icon and text */
-       font-size: 18px; /* Adjust icon size as needed */
-
+      margin-right: 14px;
+      font-size: 18px;
     }
   }
 }

@@ -44,13 +44,13 @@
     &-link {
       color: #333;
       padding: 10px 15px;
-      display: flex;  /* Cambiamos a flex para alinear el texto y la imagen horizontalmente */
-      align-items: center; /* Alineamos verticalmente el texto y la imagen */
+      display: flex;
+      align-items: center; 
       border-radius: 4px;
     }
 
     &-text {
-      margin-right: 5px; /* Espacio entre el texto y la imagen */
+      margin-right: 5px;
         cursor: pointer;
     }
 
@@ -65,12 +65,12 @@
       height: 35px;
       border-radius: 50%;
       object-fit: cover;
-      cursor: pointer; /* Cambia el cursor al pasar por encima */
+      cursor: pointer;
     }
 
     &-logout {
       position: absolute;
-      top: 100%; /* Coloca el texto debajo de la imagen */
+      top: 100%;
       right: 0;
       background-color: #fff;
       border: 1px solid #ccc;
@@ -78,10 +78,10 @@
       border-radius: 4px;
       font-size: 14px;
       color: #333;
-      z-index: 1; /* Asegura que esté por encima de otros elementos */
+      z-index: 1;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      white-space: nowrap; /* Evita que el texto se corte */
-        cursor: pointer; /* Indica que se puede hacer clic */
+      white-space: nowrap;
+        cursor: pointer;
     }
   }
 

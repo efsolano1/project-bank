@@ -1,0 +1,51 @@
+.confirm{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+   border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   align-items: center;
+
+    &__title{
+         margin-bottom: 10px;
+        font-size: 1.2rem;
+          color: #fff;
+        }
+    &--success{
+       background-color: green;
+     }
+    &--error{
+       background-color: red;
+    }
+
+    &__buttons{
+        display: flex;
+      justify-content: space-around;
+       gap: 10px; /* Space between buttons */
+
+    }
+  &__button {
+        padding: 8px 12px;
+         border: none;
+       border-radius: 4px;
+      cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.9rem;
+   &--confirm{
+    background-color: #2a8015;
+     color: #fff;
+       &:hover{
+          background-color: #1e5e0d;
+     }
+  }
+    &--cancel{
+       background-color: #e74c3c;
+        color: #fff;
+     &:hover {
+            background-color: #c0392b;
+       }
+    }
+}
+
+}

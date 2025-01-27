@@ -1,0 +1,39 @@
+<div class="transaction-modal">
+    <div class="transaction-modal__header">
+        <img src="../../../assets/images/transacciones.png" alt="Transaction Image"
+            class="transaction-modal__header-image">
+        <h2 class="transaction-modal__header-title">Crear Transacción.</h2>
+    </div>
+    <div class="transaction-modal__form">
+        <div class="transaction-modal__form-item">
+            <label for="amount" class="transaction-modal__form-label">Amount</label>
+            <input type="number" id="amount" placeholder="Amount" [(ngModel)]="amount"
+                class="transaction-modal__form-input" />
+        </div>
+        <div class="transaction-modal__form-item">
+            <label for="type" class="transaction-modal__form-label">Type</label>
+            <select id="type" [(ngModel)]="type" class="transaction-modal__form-select" (change)="calculateCost()">
+                <option *ngFor="let option of typeOptions" [value]="option.value">{{option.label}}</option>
+            </select>
+        </div>
+        <div class="transaction-modal__form-item">
+            <label for="idAccount" class="transaction-modal__form-label">Account Number</label>
+            <select id="idAccount" [(ngModel)]="idAccount" class="transaction-modal__form-select">
+                <option *ngFor="let account of accounts" [value]="account.accountNumber">
+                    <span style="font-weight: bold">{{account.accountName}}</span>
+                    - {{account.accountNumber}}
+                </option>
+            </select>
+        </div>
+        <div class="transaction-modal__form-item">
+            <label for="cost" class="transaction-modal__form-label">Transaction Cost</label>
+            <input type="number" id="cost" placeholder="Cost" [value]="cost" class="transaction-modal__form-input"
+                readonly />
+        </div>
+
+        <div class="transaction-modal__form-actions">
+            <button class="transaction-modal__form-button" (click)="saveTransaction()">Crear</button>
+            <button class="transaction-modal__form-close" (click)="onNoClick()">Cancelar</button>
+        </div>
+    </div>
+</div>

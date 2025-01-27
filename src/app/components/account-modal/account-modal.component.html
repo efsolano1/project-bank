@@ -1,0 +1,96 @@
+<!-- <div class="account-modal">
+  <div class="account-modal__header">
+    <img src="../../../assets/images/bankAccount.png" alt="Account Image" class="account-modal__header-image">
+    @if(!account){
+    <h2 class="account-modal__header-title">Crear Cuenta.</h2>
+    }
+    @if(account){
+    <h2 class="account-modal__header-title">Actualizar Cuenta.</h2>
+    }
+
+  </div>
+  <div class="account-modal__form">
+    <div class="account-modal__form-item">
+      <label for="customerId" class="account-modal__form-label" [hidden]="true">Customer ID</label>
+      @if(account){
+      <input type="text" id="customerId" placeholder="Customer Id" [(ngModel)]="customerId"
+        class="account-modal__form-input" [hidden]="true" />
+      }
+      @if(!account){
+      <input type="text" id="customerId" placeholder="Customer Id" class="account-modal__form-input" [hidden]="true"
+        readonly />
+      }
+
+
+    </div>
+    <div class="account-modal__form-item">
+      <label for="accountName" class="account-modal__form-label">Account Name</label>
+      <input type="text" id="accountName" placeholder="Account Name" [(ngModel)]="accountName"
+        class="account-modal__form-input" />
+    </div>
+    <div class="account-modal__form-item">
+      <label for="accountNumber" class="account-modal__form-label">Account Number</label>
+      <input type="text" id="accountNumber" placeholder="Account Number" [(ngModel)]="accountNumber"
+        class="account-modal__form-input" />
+    </div>
+    <div class="account-modal__form-item">
+      <label for="balance" class="account-modal__form-label">Balance</label>
+      <input type="number" id="balance" placeholder="Balance" [(ngModel)]="balance" class="account-modal__form-input" />
+    </div>
+    <div class="account-modal__form-item">
+      <label for="status" class="account-modal__form-label">Status</label>
+      <input type="text" id="status" placeholder="Status" [(ngModel)]="status" class="account-modal__form-input" />
+    </div>
+    <div class="account-modal__form-actions">
+      <button class="account-modal__form-button" (click)="saveAccount()">{{account ? 'Actualizar' : 'Crear'}}</button>
+      <button class="account-modal__form-close" (click)="onNoClick()">Cancelar</button>
+    </div>
+  </div>
+</div> -->
+
+<div class="account-modal">
+  <div class="account-modal__header">
+    <img src="../../../assets/images/bankAccount.png" alt="Account Image" class="account-modal__header-image">
+    @if(!account){
+    <h2 class="account-modal__header-title">Crear Cuenta.</h2>
+    }
+    @if(account){
+    <h2 class="account-modal__header-title">Actualizar Cuenta.</h2>
+    }
+
+  </div>
+  <form [formGroup]="accountForm" class="account-modal__form" (ngSubmit)="saveAccount()">
+    <!-- <div class="account-modal__form-item">
+      <label for="customerId" class="account-modal__form-label" [hidden]="true">Customer ID</label>
+        <input type="text" id="customerId" placeholder="Customer Id" formControlName="customerId"   class="account-modal__form-input"  />
+    </div> -->
+    <div class="account-modal__form-item">
+      <label for="accountName" class="account-modal__form-label">Account Name</label>
+      <input type="text" id="accountName" placeholder="Account Name" formControlName="accountName"
+        class="account-modal__form-input" />
+    </div>
+    <div class="account-modal__form-item">
+      <label for="accountNumber" class="account-modal__form-label">Account Number</label>
+      <input type="text" id="accountNumber" placeholder="Account Number" formControlName="accountNumber"
+        class="account-modal__form-input" />
+    </div>
+    <div class="account-modal__form-item">
+      <label for="balance" class="account-modal__form-label">Balance</label>
+      <input type="number" id="balance" placeholder="Balance" formControlName="balance" class="account-modal__form-input" />
+    </div>
+       <div class="account-modal__form-item">
+        <label for="status" class="account-modal__form-label">Status</label>
+            <select
+              id="status"
+              formControlName="status"
+                class="account-modal__form-select"
+             >
+               <option *ngFor="let option of statusOptions" [value]="option.value">{{option.label}}</option>
+            </select>
+    </div>
+    <div class="account-modal__form-actions">
+      <button type="submit" class="account-modal__form-button" [disabled]="accountForm.invalid">{{account ? 'Actualizar' : 'Crear'}}</button>
+      <button type="button" class="account-modal__form-close" (click)="onNoClick()">Cancelar</button>
+    </div>
+  </form>
+</div>

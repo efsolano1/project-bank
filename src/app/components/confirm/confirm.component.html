@@ -1,0 +1,7 @@
+<div class="confirm" [ngClass]="'confirm--' + type"  >
+    <h2 class="confirm__title">  {{message}} </h2>
+    <div class="confirm__buttons">
+        <button  class="confirm__button confirm__button--confirm" (click)="onConfirm()">Confirmar</button>
+       <button  class="confirm__button confirm__button--cancel" (click)="onCancel()">Cancelar</button>
+   </div>
+ </div>

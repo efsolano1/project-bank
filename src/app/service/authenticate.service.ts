@@ -36,11 +36,4 @@ export class AuthenticateService {
     });
   }
 
-  /*
-    private getHeaders(): HttpHeaders {
-      const token = this.authService.getToken();
-      return new HttpHeaders({
-        'Authorization': Bearer ${token}
-      });
-    }*/
 }

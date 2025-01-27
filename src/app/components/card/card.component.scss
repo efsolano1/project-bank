@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+.card {
+  background-color: #d7dbd5; /* Light blue background */
+  border-radius: 10px;
+    padding: 20px;
+    display: flex; /* Flexbox for horizontal layout */
+    align-items: center; /* Align items vertically */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Take full width*/
+
+    &__icon{
+      margin-right: 20px; /* Space between the icon and title/text*/
+      width: 80px; /* Set the icon width */
+      height: 80px; /* Set the icon height */
+        display: flex;
+      align-items: center;
+      justify-content: center;
+        background-color: #fff; /* White background for the icon*/
+        border-radius: 50%;/* Rounded corners for the background */
+     }
+   &__icon-svg{
+     width: 50px;
+     height: 50px;
+        fill:#29ABE2;
+   }
+     &__icon-image{
+         width: 50px;
+        height: 50px;
+     border-radius: 50%; 
+        object-fit: cover;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+     
+    }
+    &__title {
+       color: #43464b; 
+        font-size: 1.2rem;
+      font-weight: 700; 
+      margin-bottom: 5px;  
+      font-family: 'Open Sans', sans-serif; 
+    }
+
+    &__value {
+       color: #f3f8fd; 
+      font-size: 1.8rem;
+        font-weight: bold;
+      font-family: 'Open Sans', sans-serif; 
+    }
+}

@@ -1,1 +1,20 @@
-<p>transactions works!</p>
+
+<div class="transactions-container">
+  <app-card [title]="'Saldo Total  : ' + (accountName || '')" [value]="accountBalance" [imageSrc]="image"></app-card>
+</div>
+<div class="transaction-container">
+  <button class="transaction-created" (click)="createTransaction()">Crear Transaccion</button>
+  <app-table [tableHeaders]="tableHeaders"
+  [tableData]="tableData">
+  </app-table>
+    <div class="transactions__modal-overlay" *ngIf="showModal">
+         <app-transaction-modal  (close)="closeModal($event)" [accounts]="accounts"></app-transaction-modal>
+      </div>
+</div>
+<app-loader [isVisible]="loader"></app-loader>
+
+@if(showAlert){
+  <div class="users__alert">
+    <app-alert [message]="alertMessage" [type]="alertType" (close)="closeAlert()"></app-alert>
+  </div>
+} 
